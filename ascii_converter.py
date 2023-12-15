@@ -16,7 +16,7 @@ def pixels_to_ascii(image):
     ascii_str = ''
     for pixel_value in pixels:
         brightness = int(pixel_value / 255 * (len(ASCII_CHARS) - 1))
-        ascii_str += ASCII_CHARS[::-1][brightness]  # Инвертируем порядок символов
+        ascii_str += ASCII_CHARS[::-1][brightness] 
     return ascii_str
 
 def image_to_ascii(image_path, new_width=200):
@@ -56,8 +56,6 @@ def show_images_in_directory(directory):
         return None
 
 
-# ... (ваш предыдущий код)
-
 def select_directory():
     while True:
         directory = input("Введите путь к директории ('exit' для выхода): ")
@@ -68,8 +66,6 @@ def select_directory():
         else:
             print("Указанная директория не существует. Пожалуйста, введите корректный путь.")
 
-
-# ... (ваш предыдущий код)
 
 def create_ascii_file(ascii_image, image_path):
     create_file = input("Хотите сохранить ASCII-арт в файл? (y/n): ")
